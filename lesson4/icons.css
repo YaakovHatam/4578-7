@@ -1,0 +1,18 @@
+a[href$='.pdf'], a[href$='.xlsx'], a[href$='.docx'] {
+    background-size: 18px;
+    background-position: left center;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+}
+
+a[href$='.pdf'] {
+    background-image: url(images/pdf-icon.png);
+}
+
+a[href$='.xlsx'] {
+    background-image: url(images/excel-icon.png);
+}
+
+a[href$='.docx'] {
+    background-image: url(images/word.png);
+}

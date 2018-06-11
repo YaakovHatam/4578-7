@@ -1,0 +1,13 @@
+.required::after {
+    content: "*";
+    color: red;
+    font-weight: 700;
+}
+
+.text::before {
+    content: 'hello ';
+}
+
+.text::after {
+    content: " Student";
+}

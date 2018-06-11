@@ -1,0 +1,92 @@
+.box {
+    /* =================== */
+    /* brder */
+    /* =================== */
+
+     /* long way */
+     /*
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    */
+
+    /* shortand */
+    border: 2px solid black;
+
+
+    /* only top */
+    /*
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: black;
+    */
+
+
+
+
+    /* =================== */
+    /* padding */
+    /* =================== */
+
+    /* long way */
+    /*
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    */
+
+    /* short way */
+    padding: 10px;
+
+
+
+
+    /* =================== */
+    /* margin */
+    /* =================== */
+
+    /* long way */
+    /*
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    */
+
+    /* short way */
+    margin: 10px;
+
+
+    /* diffrent pixels long way */
+    /*
+    margin-top: 40px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    */
+
+    /* diffrent pixels short way */
+    margin: 40px 30px 20px 10px;
+
+     /*
+    margin-top: 40px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    margin-left: 30px;
+    */
+
+    /* diffrent pixels short way */
+    margin: 40px 30px;
+
+
+     /*
+    margin-top: 40px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    */
+
+    /* diffrent pixels short way */
+    margin: 40px 30px 20px;
+}

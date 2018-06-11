@@ -1,0 +1,111 @@
+/* All selector */
+* {
+
+}
+
+body {
+    font-size: 28px;
+}
+/* tag selector */
+div {
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+/* class selector */
+.cls-name {
+
+}
+
+/* id selector */
+#id-tag-name {
+
+}
+
+
+/* div1 element */
+#div1 {
+
+}
+
+.a {
+
+}
+
+div {
+
+}
+
+div#div1.a {
+
+}
+
+
+/* end div1 element */
+
+
+
+
+/* element state selector */
+:hover {
+
+}
+
+a:active {
+
+}
+
+a:visited {
+
+}
+
+/* complex/specific selector */
+div p span {
+    color: red;
+}
+
+/* immediate parent */
+div>p>span {
+    color: blue;
+}
+
+/* brother selector */
+div + section {
+    color: brown;
+}
+
+/* attribute selectors */
+/* have attribute */
+a[title] {
+    color: darkgreen;
+}
+
+/* exactly */
+a[href="http://google.fr"] {
+    color: pink;
+}
+
+/* contains string */
+a[href*="google"] {
+    color: tomato;
+}
+
+a[href^="https"] {
+    color: teal;
+}
+
+a[href$="co.uk"] {
+    color: purple;
+}
+
+a[href$=".pdf"] {
+
+}
+
+a[href$=".docx"] {
+
+}
+
+tr:nth-child(2n){
+    background-color: blanchedalmond;
+}

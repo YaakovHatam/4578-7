@@ -1,0 +1,60 @@
+/* all tags selector
+* {
+	
+}
+*/
+body {
+	font-size: 15px;
+	/* direction: rtl; 
+	background-color: rgb(243, 119, 32); *//* hex: #F37720 */
+	font-family: 'Raleway', sans-serif;
+
+	}
+h1 {
+	color: rgb(237, 36, 45);
+	font-size: 2.8em;
+	font-weight: 700;
+}
+
+h2 {
+	color: rgb(255, 205, 52);
+	background-color: rgb(237, 36, 45);
+	font-weight: 400;
+}
+
+div, .underlined {
+	text-decoration: underline;
+	font-weight: 400;
+}
+
+.bolder{
+	font-weight: 700;
+}
+
+h2:hover {
+	color: white;
+}
+
+
+#main-page {
+	width: 550px;
+	margin:0 auto;
+}
+
+header a:link {
+	color: red;
+}
+
+header a:visited {
+	color: black;
+}
+
+header a:hover {
+	color: white;
+	background-color: black;
+}
+
+header a:active {
+	background-color: black;
+	color:rgb(255, 205, 52);
+}
