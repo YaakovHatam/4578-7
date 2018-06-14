@@ -1,0 +1,25 @@
+#slider {
+    position: relative;
+    width: 400px;
+}
+#slider>ul {
+    list-style-type: none;
+}
+#slider>ul>li>img {
+    max-width: 400px;
+}
+
+#slider .arrow {
+    font-size: 30px;
+    font-weight: 700;
+    position: absolute;
+    top: 120px;
+}
+
+#slider .arrow.left {
+    left: 0;
+}
+
+#slider .arrow.right {
+    right: 0;
+}
