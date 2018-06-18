@@ -1,0 +1,17 @@
+body {
+    width: 70%;
+    margin:0 auto;
+    font-size: 30px;
+}
+
+
+.father {
+    overflow-y: scroll;
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+} 
+.child {
+    width: 150px;
+    height: 150px;
+}

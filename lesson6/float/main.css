@@ -1,0 +1,18 @@
+body {
+    width: 70%;
+    margin:0 auto;
+    font-size: 30px;
+}
+
+div {
+    float: right;
+    width: 40px;
+}
+
+.clear {
+    clear: both;
+}
+
+.links {
+    overflow: hidden;
+}
