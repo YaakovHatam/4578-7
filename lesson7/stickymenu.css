@@ -1,0 +1,9 @@
+.header-placeholder, header {
+    height: 40px;
+}
+header {
+    position: fixed;
+}
+main.content {
+    height: 1900px;
+}

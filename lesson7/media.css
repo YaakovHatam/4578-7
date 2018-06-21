@@ -1,0 +1,27 @@
+@media print {
+    * {
+      background-color: #fff !important;
+      color: #000 !important;
+    }
+  }
+
+  body {
+      width: 70%;
+      margin:0 auto;
+      font-size: 30px;
+  }
+
+  .cell {
+      background-color: brown;
+      width: 31.3%;
+      float: left;
+      height: 250px;
+      margin:0 1%;
+  }
+
+  @media screen and (max-width: 700px) {
+    .cell {
+        width: 98%;
+        margin-bottom: 5px;
+      }
+  }

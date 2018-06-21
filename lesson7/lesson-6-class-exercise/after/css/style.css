@@ -1,0 +1,110 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1500px;
+  margin:0 auto;
+}
+
+.home-main {
+  background-image: url(/img/2.jpg);
+  min-height: 800px;
+}
+header {
+  overflow: hidden;
+  background-color: #65aaf0;
+  padding: 20px 0;
+}
+
+header ul {
+  margin-top: 0;
+  list-style: none;
+}
+
+header ul li {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+header ul li:hover {
+  background-color: #fff;
+}
+
+header ul li:hover a {
+  color: #000;
+}
+
+header ul li a {
+  color: #fff;
+}
+
+.leave-details {
+  color: rgb(255, 255, 255);
+  background-color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 450px;
+  right: 450px; 
+}
+
+.half {
+  width: 50%;
+  float: left;
+}
+
+.half-right {
+  width: 50%;
+  float: right;
+}
+
+
+
+/* ======== footer ========== */
+footer {
+  background-color: #65aaf0;
+}
+
+footer p {
+  margin-top: 0;
+}
+
+/* ======== end footer ========== */
+
+
+
+/* ======== gallery ========== */
+.gallery-main {
+ 
+}
+
+.row {
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.row:first-child {
+  margin-top: 0;
+}
+
+.row .cell {
+  width: 31.3%;
+  float: left;
+  text-align: center;
+  background-image: url(/img/github.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 250px;
+  color: #fff;
+  margin: 0 1%;
+  cursor: pointer;
+}
+
+.hover-content {
+  visibility: hidden;
+}
+
+.cell:hover .hover-content {
+  visibility: visible;
+}
+
