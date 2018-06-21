@@ -11,11 +11,11 @@ LTS version:
 https://nodejs.org/en/download/ 
 
 ### NPM packages
-open terminal in VSCOde
-npm install http-server -g
+open terminal in VSCode
+`npm install http-server -g`
 
 ### Project open and run
 open VSCode in folder (root)
-open terminal in VSCOde
-http-server
+open terminal in VSCode
+`http-server`
 surf to: http://127.0.0.1:8080
