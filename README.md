@@ -20,8 +20,16 @@ open terminal in VSCode and run
 `http-server`
 surf to: http://127.0.0.1:8080
 
+## Lesson 6
+### Exercise
+https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/before
 
-#### Lesson 7
+### useful links
+Normalize: https://necolas.github.io/normalize.css/
+Typebase: http://devinhunt.github.io/typebase.css/
 
-useful links:
+## Lesson 7
+### Exercise
+
+### useful links
 https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
