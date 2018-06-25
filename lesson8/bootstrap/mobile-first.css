@@ -1,0 +1,41 @@
+#a1 {
+    height: 50px;
+    background-color: aqua;
+    margin:0 auto;
+}
+
+#a1 {
+    width: 100%;
+}
+
+@media screen and (min-width: 750px) {
+    #a1 {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1170px) {
+    #a1 {
+        width: 60%;
+    }
+}
+/* bad practice
+
+#a1 {
+    width: 60%;
+}
+
+
+@media screen and (max-width: 970px) {
+    #a1 {
+        width: 80%;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    #a1 {
+        width: 100%;
+    }
+}
+*/

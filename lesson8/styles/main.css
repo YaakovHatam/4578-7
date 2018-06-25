@@ -1,0 +1,11 @@
+div div#container section.box>p#content.ad.ver2 { /* 234 */
+    background-color: rgb(0, 255, 0); 
+}
+
+.main div#container section.box>p#content.ad.ver2 { /* 243 */
+    width: 150px;
+    height: 150px;
+    background-color: rgb(255, 0, 0); 
+}
+
+

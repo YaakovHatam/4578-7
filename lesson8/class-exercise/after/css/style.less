@@ -1,0 +1,59 @@
+@bgColor: #65aaf0;
+@siteMaxWidth: 1500px;
+
+body {
+  max-width: @siteMaxWidth;
+  margin: 0 auto;
+}
+main {
+  background-image: url(/img/2.jpg);
+  min-height: 800px;
+}
+.main-header {
+  overflow: hidden;
+  background-color: @bgColor;
+  padding: 20px 0;
+
+  ul {
+    margin-top: 0;
+    list-style: none;
+
+    > li {
+      float: left;
+      width: 20%;
+      text-align: center;
+
+      &:hover {
+        background-color: #fff;
+
+        a {
+          color: #000;
+        }
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}
+.leave-details {
+  color: #ffffff;
+  background-color: lighten(@bgColor, 20%);
+  position: absolute;
+  top: 450px;
+  right: 450px;
+}
+.half {
+  width: 50%;
+  float: left;
+}
+.half-right {
+  width: 50%;
+  float: right;
+}
+
+footer {
+  background-color: @bgColor;
+  height: 50px;
+}

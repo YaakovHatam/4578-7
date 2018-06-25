@@ -1,0 +1,50 @@
+body {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+main {
+  background-image: url(/img/2.jpg);
+  min-height: 800px;
+}
+.main-header {
+  overflow: hidden;
+  background-color: #65aaf0;
+  padding: 20px 0;
+}
+.main-header ul {
+  margin-top: 0;
+  list-style: none;
+}
+.main-header ul > li {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+.main-header ul > li:hover {
+  background-color: #fff;
+}
+.main-header ul > li:hover a {
+  color: #000;
+}
+.main-header ul > li a {
+  color: #fff;
+}
+.leave-details {
+  color: #ffffff;
+  background-color: #c2ddf9;
+  position: absolute;
+  top: 450px;
+  right: 450px;
+}
+.half {
+  width: 50%;
+  float: left;
+}
+.half-right {
+  width: 50%;
+  float: right;
+}
+footer {
+  background-color: #65aaf0;
+  height: 50px;
+}
