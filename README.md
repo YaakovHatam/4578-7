@@ -32,3 +32,7 @@ Typebase: http://devinhunt.github.io/typebase.css/
 
 ### useful links
 CSS breakpoints: https://responsivedesign.is/develop/browser-feature-support/media-queries-for-common-device-breakpoints/
+
+## Lesson 8 
+### Tools
+LESS extension to VSCode, install from extension tab: `Easy LESS`
