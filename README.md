@@ -36,3 +36,6 @@ CSS breakpoints: https://responsivedesign.is/develop/browser-feature-support/med
 ## Lesson 8 
 ### Tools
 LESS extension to VSCode, install from extension tab: `Easy LESS`
+
+### Exercise
+make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/before with bootstrap
