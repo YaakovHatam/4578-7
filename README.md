@@ -40,3 +40,12 @@ LESS extension to VSCode, install from extension tab: `Easy LESS`
 bootstrap http://getbootstrap.com/docs/3.3/getting-started/#download
 ### Exercise
 make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/before with bootstrap
+
+## Lesson 9
+### JavaScript
+- Operators
+- Types
+- Variables
+- Flow control
+- Objects
+- Loops
