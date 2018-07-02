@@ -49,3 +49,9 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
 - Flow control
 - Objects
 - Loops
+
+## Lesson 10
+- Document object
+
+- Functions
+- Arrays
