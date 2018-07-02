@@ -28,12 +28,17 @@ for(var i=1; i <= 10; i++) {
 
 /* ex6 */
 var num = 12345;
-var newNum = 0;
-for (var i=0; num > 0 ; i++) {
-    var adder = num % 10;
-    num = Math.floor(num/10);
-    // TODO: calculate the newNum
+var reversedNumber = 0
+var remainder;
+
+while(num > 0)
+{
+    remainder = num % 10;
+    reversedNumber = reversedNumber*10 + remainder;
+    num /= 10;
+    num = Math.floor(num);
 }
+console.log(reversedNumber);
 
 /* ex7 */
 
