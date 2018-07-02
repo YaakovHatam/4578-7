@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel='stylesheet' href='arrays.css'>
+</head>
+
+<body>
+    <div id='example'>
+        <span>text</span>
+    </div>
+    <div id='articles'>
+
+    </div>
+    <script>
+        var articlesArray = [];
+        articlesArray.push({
+            header: 'article 1',
+            content: 'some content'
+        });
+        articlesArray.push({
+            header: 'article 2',
+            content: 'some content'
+        });
+        articlesArray.push({
+            header: 'article 3',
+            content: 'some content'
+        });
+
+
+        var articlesElement = document.getElementById('articles')
+        for (var i = 0; i < articlesArray.length; i++) {
+            var newDiv = document.createElement('div');
+            newDiv.className = 'article';
+            newDiv.innerHTML = makeHtml(articlesArray[i]);
+            articlesElement.appendChild(newDiv);
+        }
+
+        function makeHtml(articleObject) {
+            var html = "<h2>" + articleObject.header + "</h2>";
+            html += "<p>" + articleObject.content + "</p>";
+            return html;
+        }
+
+
+    </script>
+    <script src='arrays.js'></script>
+</body>
+
+</html>

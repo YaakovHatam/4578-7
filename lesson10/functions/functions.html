@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script src='functions.js'></script>
+    <script>
+        // var userNumber = prompt("Please give me a number from 2 to 10");
+        var userNumber = prompt("Please give me a number");
+        userNumber = Number(userNumber);
+        
+        if (Number.isNaN(userNumber)) {
+            // TODO: || userNumber > 1 || userNumber < 11
+            alert('Bad input');
+        } else {
+            var x = factorial(userNumber);
+            document.body.innerText += x;
+        }
+    </script>
+</body>
+</html>

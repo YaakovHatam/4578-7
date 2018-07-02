@@ -1,0 +1,8 @@
+* {
+    box-sizing: border-box;
+}
+.article {
+    float: left;
+    width: 33%;
+    height: 50px;
+}
