@@ -55,3 +55,15 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
 
 - Functions
 - Arrays
+
+## Lesson 11
+- AND / OR
+- Switch
+- Bonus: Sorting (quick sort, bubble sort, Counting sort)
+- not (!)
+- break (in loops)
+- Shoratnd if
+- Run time
+
+## Lesson 12
+- Recursion
