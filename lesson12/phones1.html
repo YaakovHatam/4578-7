@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var VAT = 17; // In %
+        var cellPrice = 849; // before VAT
+        var accessoryPrice = 39; // before VAT
+        var wallet = 4300;
+
+        // my vars
+        var totalCellPhones = 0;
+        var totalAccesories = 0;
+        var currentBalance = wallet;
+
+        var cellPriceAfterVat = calculatePriceAfterVat(cellPrice);
+        var accessoryPriceAfterVat= calculatePriceAfterVat(accessoryPrice);
+
+        while (currentBalance > Math.min(cellPriceAfterVat, accessoryPriceAfterVat)) {
+            if (currentBalance > cellPriceAfterVat) {
+                currentBalance -= cellPriceAfterVat;
+                totalCellPhones++;
+            }
+            else if (currentBalance > accessoryPriceAfterVat) {
+                currentBalance -= accessoryPriceAfterVat;
+                totalAccesories++;
+            }
+        }
+
+        print(totalCellPhones, totalAccesories);
+        function print(_totalCellPhones, _totalAccesories) {
+            var sum = _totalCellPhones*cellPriceAfterVat + _totalAccesories*accessoryPriceAfterVat;
+            console.log("You can purchase " + _totalCellPhones + " smartphones and " 
+            + _totalAccesories + " accessories with total cost of " + sum.toFixed(2) + " NIS");
+        }
+
+        function calculatePriceAfterVat(price) {
+            return price*(VAT/100)+price
+        }
+
+        // x-= 1 ~ x = x - 1
+
+    </script>
+</body>
+</html>

@@ -9,7 +9,7 @@ for(var i=0; i < myArray.length; i++) {
     console.log(myArray[i]);
 }
 
-
+// Find element position in array
 console.log(myArray.length)
 console.log('indexOf: ' + myArray.indexOf(5));
 console.log('indexOf: ' + myArray.indexOf(15));
