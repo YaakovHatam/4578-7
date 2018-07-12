@@ -53,7 +53,7 @@ var recipes = [
     recipe3
 ]
 
-function recipePreprationTime(maxMinutes) {
+function recipePreprationTime(recipes, maxMinutes) {
     var rArray = [];
     for(var i=0; i <recipes.length; i++) {
         if (recipes[i].prepationTime < maxMinutes) {
@@ -63,5 +63,10 @@ function recipePreprationTime(maxMinutes) {
     return rArray;
 }
 
-var result = recipePreprationTime(16); // all less then 15 mins
+function gluten(recipes, withotGluten) {
+
+}
+
+var result = recipePreprationTime(recipes, 16); // all less then 15 mins
+var result2 = gluten(result, true);
 console.log(result);

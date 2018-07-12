@@ -68,3 +68,7 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
 ## Lesson 13
 - Recursion
 - recipe project
+- enrichment: bfs, dfs, dijkstra, Bellman Ford
+
+## Lesson 14
+ - two dimensional array
