@@ -72,3 +72,5 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
 
 ## Lesson 14
  - two dimensional array
+ - ATM exercise
+ - Bubble sort code example
