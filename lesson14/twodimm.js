@@ -36,3 +36,30 @@ for (var i=0; i < MATRIX_SIZE; i++) {
     }
 }
 console.log(matrix);
+
+
+/*  */
+var MATRIX_SIZE = 10;
+var matrix = [];
+for (var i=0; i < MATRIX_SIZE; i++) {
+    matrix[i] = [];
+    for (var j=0; j < MATRIX_SIZE; j++) {
+        matrix[i][j] = Math.floor(Math.random()*100);
+    }
+}
+console.log(matrix);
+var maxSum = 0;
+var maxSumRowIndex = -1;
+
+for (var i=0; i < MATRIX_SIZE; i++) {
+    var sum = 0;
+    for (var j=0; j < MATRIX_SIZE; j++) {
+        sum += matrix[i][j];
+    }
+    if (sum > maxSum) {
+        maxSum = sum;
+        maxSumRowIndex = i;
+    }
+}
+
+
