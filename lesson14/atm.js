@@ -7,6 +7,8 @@ function get_balance() {
 function make_deposit() {
    
 }
+// Only with acceptedBills, for ex: user can withdraw 200, 250, 290, but cannot withdraw 310
+// return the bills and how much from each bill.
 function make_withdrawal() {
   
 }

@@ -14,7 +14,7 @@ function bubbleSort(a)
                 swapped = true;
             }
         }
-    } while (swapped);
+    } while (swapped == true);
 }
 
 bubbleSort(a);
