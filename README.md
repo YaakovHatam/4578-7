@@ -71,6 +71,6 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
 - enrichment: bfs, dfs, dijkstra, Bellman Ford
 
 ## Lesson 14
- - two dimensional array
+ - two dimensional array, Matrix
  - ATM exercise
  - Bubble sort code example
