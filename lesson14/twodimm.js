@@ -61,5 +61,6 @@ for (var i=0; i < MATRIX_SIZE; i++) {
         maxSumRowIndex = i;
     }
 }
+console.log(maxSumRowIndex + " : sum of " + maxSum);
 
 

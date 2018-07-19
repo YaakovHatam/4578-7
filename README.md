@@ -74,3 +74,19 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
  - two dimensional array, Matrix
  - ATM exercise
  - Bubble sort code example
+
+ ## Lesson 15
+ - Variables (var, let, const)
+ - Scope, global scope
+ - Garbage collector
+ - IIFE (Immideatly invoked function expression)
+ - Anonymous function, function invoke
+ - BONUS: js array `splice` function
+ - Hoisting
+ - Falsy values
+
+
+
+
+ # Resources:
+ http://shaytavor.com/%D7%A7%D7%95%D7%A8%D7%A1-%D7%92%D7%90%D7%95%D7%95%D7%94/
