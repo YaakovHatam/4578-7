@@ -85,7 +85,11 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
  - Hoisting
  - Falsy values
 
-
+## Lesson 16
+ - debugger
+ - setTimeout
+ - setInterval, clearInterval
+ - **Who Wants to Be a Millionaire** game
 
 
  # Resources:

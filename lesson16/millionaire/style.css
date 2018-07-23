@@ -1,0 +1,11 @@
+body {
+    direction: rtl;
+    width: 600px;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+#timer {
+    font-size: 3em;
+    color: #e1e;
+}
