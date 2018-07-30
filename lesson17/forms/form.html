@@ -10,14 +10,11 @@
 
 <body>
     <form novalidate>
-        <label>First name
-            <input type="text" required name='first'>
+        <label>x
+            <input type="text" required name='x'>
         </label>
-        <label>Last name
-            <input type="text" name='last'>
-        </label>
-        <label>Email
-            <input type="email" required name='email'>
+        <label>y
+            <input type="text" name='y'>
         </label>
         <div>
             <label>
@@ -33,20 +30,20 @@
         <button id=send>Send</button>
     </form>
     <div>
-        <ul id=contacts>
+        <ul id=calcs>
 
         </ul>
     </div>
     <script>
+        var lastCalcs = []
         document.getElementById('send').addEventListener('click', function (e) {
             e.preventDefault();
-            const first = document.forms[0].elements.first;
-            const last = document.forms[0].elements.last;
-            const email = document.forms[0].elements.email;
+            const x = document.forms[0].elements.x;
+            const y = document.forms[0].elements.y;
 
             // get the radio checked value
             const ops = document.forms[0].elements.op;
-            for(var i=0; i < ops.length; i++) {
+            for (var i = 0; i < ops.length; i++) {
                 if (ops[i].checked)
                     break;
             }
@@ -54,26 +51,69 @@
             console.log(op.value);
             // end get the radio checked value
 
-            if (first.required && first.value == '') {
-                alert('first name required');
+            lastCalcs.push(x.value + ' ' + op.value + ' ' + y.value + ' = ' + calculate(x.value, y.value, op.value));
+            const ul = document.getElementById('calcs');
+            ul.innerHTML = '';
+            for (let j = lastCalcs.length - 1, k = 3; k > 0 && j >= 0; k-- , j--) {
+                ul.innerHTML += '<li>' + lastCalcs[j] + "</li>";
             }
-            if (email.required && email.value == '') {
-                alert('email required');
-            }
-
-            const c = new Contact(first.value, last.value, email.value);
-            document.getElementById('contacts').innerHTML += '<li>' + JSON.stringify(c) + '</li>';
         })
 
-        function Contact(first, last, email) {
-            this.first = first;
-            this.last = last;
-            this.email = email;
+        function calculate(x, y, op) {
+            console.log('op ' + op + " of " + x + " and " + y + " is:")
+
+            switch (op) {
+                case '+':
+                    return (add(x, y));
+                    break;
+                case '-':
+                    return (subtract(x, y));
+                    break;
+                case '*':
+                    return (multiply(x, y));
+                    break;
+                case '/':
+                    return (division(x, y));
+                    break;
+                default:
+                    console.error('op in not ok');
+            }
         }
 
-        function validateEmail(email) {
-            var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-            return re.test(String(email).toLowerCase());
+        function add(x, y) {
+            if (checkNumbers(x, y)) {
+                return x + y;
+            }
+        }
+
+        function subtract(x, y) {
+            if (checkNumbers(x, y)) {
+                return x - y;
+            }
+        }
+
+        function multiply(x, y) {
+            if (checkNumbers(x, y)) {
+                return x * y;
+            }
+        }
+
+        function division(x, y) {
+            if (checkNumbers(x, y)) {
+
+                // Shortand if
+                return y == 0 ? null : x / y;
+
+                /*
+                if ( y == 0) {
+                    console.log('Cannot divide by zero');
+                    return null;
+                } else {
+                    return x / y;
+                }
+                */
+
+            }
         }
     </script>
 </body>
