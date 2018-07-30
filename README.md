@@ -94,7 +94,11 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
 ## Lesson 17
  - Templates
  - JSON
- - forms
+ - forms with JS
+
+# Lesson 18
+ - HTML Canvas
+ - intro to REGEX
 
  # Resources:
  http://shaytavor.com/%D7%A7%D7%95%D7%A8%D7%A1-%D7%92%D7%90%D7%95%D7%95%D7%94/
