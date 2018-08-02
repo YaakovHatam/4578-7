@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class='container'>
+        <form name='latlong'>
+            <div class="form-group">
+                <label for="lat">Latitude</label>
+                <input class="form-control" value='31.77' name='lat' id="lat" placeholder="Latitude">
+            </div>
+            <div class="form-group">
+                <label for="long">Longitude</label>
+                <input class="form-control" value='35.22' name='long' id="long" placeholder="Longitude">
+            </div>
+            <div class="form-group">
+                <label for="country">Country name</label>
+                <input class="form-control" value='Israel' name='country' id="country" placeholder="Country name">
+            </div>
+            <button name='submit' type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class='container'>
+        <canvas id='c' width=535 height="260"></canvas>
+    </div>
+    <script>
+        document.forms.latlong.submit.addEventListener('click', function (e) {
+            e.preventDefault();
+            const lat = Number(document.forms.latlong.lat.value);
+            const long = Number(document.forms.latlong.long.value);
+            const country = document.forms.latlong.country.value;
+
+            addCountryToCanvas(lat, long, country, 5);
+
+        });
+
+        function addCountryToCanvas(lat, long, country, scale) {
+            var canvas = document.getElementById('c');
+            var ctx = canvas.getContext('2d');
+            ctx.beginPath();
+            ctx.arc(lat * scale, long * scale, 3, 0, Math.PI * 2, true);
+            ctx.stroke();
+        }
+
+        (function() {
+            var canvas = document.getElementById('c');
+            var ctx = canvas.getContext('2d');
+            var background = new Image();
+            background.src = "58581c722e57904.jpg";
+
+            // Make sure the image is loaded first otherwise nothing will draw.
+            background.onload = function () {
+                ctx.drawImage(background, 0, 0);
+            }
+        }());
+
+    </script>
+</body>
+
+</html>
