@@ -18,6 +18,14 @@ open VSCode in folder (root), then open terminal in VSCode and run `http-server`
 
 surf to: http://127.0.0.1:8080
 
+## Lesson 4
+- generated content
+- box model
+- icons
+
+## Lesson 5
+- positions
+
 ## Lesson 6
 ### Exercise
 https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/before
