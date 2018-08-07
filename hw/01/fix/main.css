@@ -1,0 +1,48 @@
+body {
+    direction: rtl;
+    width: 90%;
+    max-width: 700px;
+    margin:0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(142,40,0);
+}
+
+h2 {
+    color: rgb(182,73,38);
+}
+
+li {
+    color: rgb(70,137,182);
+}
+
+.ingredients {
+    width: 30%;
+    float: right;
+}
+
+.omelet-pic {
+    width: 70%;
+    float:right;
+}
+
+.omelet-pic img {
+    width: 100%;
+}
+
+.extra-details {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.extra-details .disclaimer {
+    font-size: 11px;
+}
+.extra-details .copyrights {
+    font-weight: 700;
+    font-size: 11px;
+}
