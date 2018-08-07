@@ -17,4 +17,4 @@ when resizing the window re calculate the new widnow dimmentions
 
 
 ## example
-dot.gif
+[crazy dot example](dot.gif)
