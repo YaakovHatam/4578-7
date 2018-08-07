@@ -12,3 +12,9 @@ as shown in the gif attached, you should design a dot element and move the dot o
 
 ## bonus
 when resizing the window re calculate the new widnow dimmentions
+
+
+
+
+## example
+dot.gif
