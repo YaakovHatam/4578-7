@@ -1,4 +1,4 @@
-# SPA HTML, CSS & JS work
+`# SPA HTML, CSS & JS work
 
 guidlines:
 - Use bootstrap in this project (v3 or v4), you can download with npm local or use a cdn.
@@ -25,3 +25,21 @@ by clicking i go! button the going counter should be increased by 1.
 
 ## Add event view
 this view insert to the array of events a new event.
+
+## Code sxample
+### HTML Template in variable
+```javascript
+  var htmlTemplate = ` <div class="container">
+        <div class='row'>
+            <div class='col-md-4'>
+                {{ ContentOne }}
+            </div>
+            <div class='col-md-4'>
+                {{ ContentTwo }}
+            </div>
+            <div class='col-md-4'>
+                {{ ContentThree }}
+            </div>
+        </div>
+    </div>`;
+```
