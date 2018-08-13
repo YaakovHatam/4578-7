@@ -1,4 +1,5 @@
 # Chess board
 
 
-(chess.png)
+![Chess board image](chess.png "Chess board image")
+
