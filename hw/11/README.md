@@ -1,4 +1,4 @@
 # Chess board
 
 
-[chess.png]
+(chess.png)
