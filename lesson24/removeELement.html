@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id='persons'>
+
+    </div>
+
+
+    <script>
+        const personHtml = `<div><h2>{{name}}</h2><p>age: {{age}}</p><button onclick='deletePerson({{id}})'>Delete</button></div>`;
+
+        const personsArray = [
+            {
+                name: 'a',
+                age: 18
+            },
+            {
+                name: 'abc',
+                age: 21
+            },
+            {
+                name: 'efg',
+                age: 25
+            }
+        ];
+
+        function buildPersonHtml() {
+            document.getElementById('persons').innerHTML = '';
+            for (let i = 0; i < personsArray.length; i++) {
+                let _temp = personHtml;
+                _temp = _temp.replace('{{name}}', personsArray[i].name);
+                _temp = _temp.replace('{{age}}', personsArray[i].age);
+                _temp = _temp.replace('{{id}}', i);
+                document.getElementById('persons').innerHTML += _temp;
+            }
+        }
+
+    buildPersonHtml();
+        function deletePerson(id) {
+           /* for(var i=0; i < personsArray.length; i++) {
+                if (personsArray[i].id == id)
+                    break;
+            }*/
+            personsArray.splice(id, 1);
+            buildPersonHtml();
+            
+        }
+    </script>
+</body>
+
+</html>
