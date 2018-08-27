@@ -1,3 +1,8 @@
+<?php
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+    error_reporting(E_ALL);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,15 +11,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php
         $title = 'welcome guest';
-
+        
         if (!empty($_GET['fname'])) {
-            $title = 'welcome '.$_GET['fname'];
+            $uname = $_GET['fname'];
+            $title = 'welcome '.$uname;
+            $handle = fopen(getcwd()."/names.txt", "rw");
+            fwrite($handle, $uname . "\n");
+            fclose($handle);
         }
         echo '<title>'.$title.'</title>';
     ?>    
 </head>
 <body>
-    <form action='index.php' method='GET'>
+    <form action='index-get.php' method='GET'>
         <label> Name:
             <input name="fname">
         </label>
