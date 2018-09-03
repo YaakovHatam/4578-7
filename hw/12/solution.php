@@ -9,7 +9,6 @@ interface IElectronicPart {
 }
  class Screen extends ElectronicPart implements IElectronicPart {
   
-    }
      public function getSpecs() {
         return 
             'Screen manufacturer: ' . $this->manufacturer . 
