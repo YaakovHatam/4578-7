@@ -17,8 +17,8 @@
         for($i=0; $i < sizeof($moviesArr); $i++) {
     ?>  
         <div>
-            <h2><?php $moviesArr[$i]->getName() ?></h2>
-            <p><?php $moviesArr[$i]->getRating() ?></p>
+            <h2><?php echo $moviesArr[$i]->getName() ?></h2>
+            <p><?php echo $moviesArr[$i]->getRating() ?></p>
             <strong>{{length}}</strong>
         </div>
     <?php
