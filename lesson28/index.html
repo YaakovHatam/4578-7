@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <a href='showFlights.php'>Show flights</a>
+    </header>
+    <form name='addflight' action="addFlight.php" method='POST'>
+        <label>flight_from
+            <input name='flight_from'>
+        </label>
+        <label>flight_to
+            <input name='flight_to'>
+        </label>
+        <label>flight_datetime
+            <input type="datetime" name='flight_datetime'>
+        </label>
+        <label>flight_special_comments
+            <textarea name='flight_special_comments'></textarea>
+        </label>
+        <label>pilot_id
+            <input name='pilot_id' type="number">
+        </label>
+        <button name='send'>Add flight</button>
+    </form>
+
+    <script>
+        document.forms[0].send.addEventListener('click', function(e) {
+            if (document.forms[0].flight_from.value.length < 4) {
+                e.preventDefault();
+                alert('flight_from');
+            }
+        });
+    </script>
+</body>
+
+</html>
