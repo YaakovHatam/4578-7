@@ -1,8 +1,16 @@
-# SQL Tables
+# Flights project
 
+## Naming
+All models should named in kebab-case, eg: `class-name-model.php`.
+
+Every class sholud named in CAML-case, eg: `ClassNameModel`
+
+All sql tables should named lowercase english charecters
+
+## SQL
 SQL Database name `northwind`
 
-## table `pilot`
+### table `pilot`
 - `id`
 - `name`
 - `level` (int)
@@ -10,13 +18,13 @@ SQL Database name `northwind`
  
 `Pilot`.`id` auto increment PK
 
-## table `country`
+### table `country`
 - `id`
 - `name`
 
 `Country`.`id` auto increment PK
 
-## table `airport`
+### table `airport`
 - `id`
 - `name`
 - `contry_id`
@@ -26,7 +34,7 @@ SQL Database name `northwind`
 `Airport`.`contry_id` FK to Country
 
 
-## table `flight`
+### table `flight`
 - `id`
 - `no` (varchar, 12)
 - `flight_datetime`
@@ -43,6 +51,9 @@ SQL Database name `northwind`
 `Flight`.`pilot_id` FK to Pilot
 
 
-# Server side
-## Pilot view
+## Server side
+### Models
+Every table should have a model class that represent a tables row.
+
+### Pilot view
 - upload picture, the picture name should get GUID as file name
