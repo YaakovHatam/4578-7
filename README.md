@@ -104,27 +104,27 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
  - JSON
  - forms with JS
 
-# Lesson 18
+## Lesson 18
  - HTML Canvas
 
-# Lesson 19
+## Lesson 19
  - intro to REGEX
  
- # Lesson 24
+## Lesson 24
  - Intro to PHP
  - remove element dynamically technic
  
- # Lesson 27
+## Lesson 27
  ##sql|
  - Create table, Primary Key
  - Select, Insert, Where
  
- # Lesson 28
+## Lesson 28
  - `PDO` with `sql`
  
- # Lesson 29
+## Lesson 29
  - `DAL` and `BL` layers.
  - Model class for each sql table
  
- # Resources:
+# Resources:
  http://shaytavor.com/%D7%A7%D7%95%D7%A8%D7%A1-%D7%92%D7%90%D7%95%D7%95%D7%94/
