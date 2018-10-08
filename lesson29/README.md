@@ -28,7 +28,7 @@ SQL Database name `northwind`
 
 ## Flight
 - `id`
-- `no` (varchar)
+- `no` (varchar, 12)
 - `flight_datetime`
 - `flight_from`
 - `flight_to`
