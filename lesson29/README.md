@@ -1,7 +1,7 @@
 # Flights project
 
 ## Naming
-All models should named in kebab-case, eg: `class-name-model.php`.
+All models files should named in kebab-case, eg: `class-name-model.php`.
 
 Every class sholud named in CAML-case, eg: `ClassNameModel`
 
