@@ -5,7 +5,7 @@ SQL Database name `northwind`
 ## Pilot
 - `id`
 - `name`
-- `level`
+- `level` (int)
 - `picture_src`
  
 `Pilot`.`id` auto increment PK
@@ -28,7 +28,7 @@ SQL Database name `northwind`
 
 ## Flight
 - `id`
-- `no`
+- `no` (varchar)
 - `flight_datetime`
 - `flight_from`
 - `flight_to`
