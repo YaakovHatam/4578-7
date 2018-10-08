@@ -41,3 +41,8 @@ SQL Database name `northwind`
 `Flight`.`to` FK to Airport
 
 `Flight`.`pilot_id` FK to Pilot
+
+
+# Server side
+## Pilot view
+- upload picture, the picture name should get GUID as file name
