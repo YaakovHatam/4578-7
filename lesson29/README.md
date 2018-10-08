@@ -30,8 +30,8 @@ SQL Database name `northwind`
 - `id`
 - `no`
 - `flight_datetime`
-- `from`
-- `to`
+- `flight_from`
+- `flight_to`
 - `pilot_id`
 
 `Flight`.`id` auto increment PK
