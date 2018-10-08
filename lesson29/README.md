@@ -1,5 +1,7 @@
 # SQL Tables
 
+SQL Database name `northwind`
+
 ## Pilot
 - `id`
 - `name`
@@ -20,6 +22,8 @@
 - `contry_id`
 
 `Airport`.`id` auto increment PK
+`Airport`.`contry_id` FK to Country
+
 
 ## Flight
 - `id`
