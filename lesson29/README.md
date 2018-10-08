@@ -30,6 +30,9 @@
 - `pilot_id`
 
 `Flight`.`id` auto increment PK
+
 `Flight`.`from` FK to Airport
+
 `Flight`.`to` FK to Airport
+
 `Flight`.`pilot_id` FK to Pilot
