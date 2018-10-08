@@ -30,15 +30,15 @@ SQL Database name `northwind`
 - `id`
 - `no` (varchar, 12)
 - `flight_datetime`
-- `flight_from`
-- `flight_to`
+- `flight_from` (int)
+- `flight_to` (int)
 - `pilot_id`
 
 `Flight`.`id` auto increment PK
 
-`Flight`.`from` FK to Airport
+`Flight`.`flight_from` FK to Airport
 
-`Flight`.`to` FK to Airport
+`Flight`.`flight_to` FK to Airport
 
 `Flight`.`pilot_id` FK to Pilot
 
