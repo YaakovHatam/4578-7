@@ -22,6 +22,7 @@ SQL Database name `northwind`
 - `contry_id`
 
 `Airport`.`id` auto increment PK
+
 `Airport`.`contry_id` FK to Country
 
 
