@@ -2,7 +2,7 @@
 
 SQL Database name `northwind`
 
-## Pilot
+## table `pilot`
 - `id`
 - `name`
 - `level` (int)
@@ -10,13 +10,13 @@ SQL Database name `northwind`
  
 `Pilot`.`id` auto increment PK
 
-## Country
+## table `country`
 - `id`
 - `name`
 
 `Country`.`id` auto increment PK
 
-## Airport
+## table `airport`
 - `id`
 - `name`
 - `contry_id`
@@ -26,7 +26,7 @@ SQL Database name `northwind`
 `Airport`.`contry_id` FK to Country
 
 
-## Flight
+## table `flight`
 - `id`
 - `no` (varchar, 12)
 - `flight_datetime`
