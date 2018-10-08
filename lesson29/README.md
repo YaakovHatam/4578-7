@@ -3,7 +3,7 @@
 ## Naming
 All models files should named in kebab-case, eg: `class-name-model.php`.
 
-Every class sholud named in CAML-case, eg: `ClassNameModel`
+Every class sholud named in Pascal case, eg: `ClassNameModel`
 
 All sql tables should named lowercase english charecters
 
