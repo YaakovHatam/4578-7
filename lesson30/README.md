@@ -14,7 +14,7 @@ Build the following queries:
 
 - show the max salary
 - show the min salary
-- Select the employees with salary from 6,000 to 7,000, show only First name, Last name and Salary
+- Select the employees with salary from 60,000 to 70,000, show only First name, Last name and Salary
 - Select all the employees 
 - select top 10 employees with the highest salaries and show First name, Last name and title
 
