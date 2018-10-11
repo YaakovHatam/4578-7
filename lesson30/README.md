@@ -15,7 +15,7 @@ Build the following queries:
 - show the max salary
 - show the min salary
 - Select the employees with salary from 60,000 to 70,000, show only First name, Last name and Salary
-- Select all the employees 
+- Select all the employees With first name starts with `f` and their title is `Senior Engineer`
 - select top 10 employees with the highest salaries and show First name, Last name and title
 
 
