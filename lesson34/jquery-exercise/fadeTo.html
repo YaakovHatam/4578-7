@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-3.3.1.js"></script>
+		<script>
+		
+			$(document).ready(function(){
+			
+				$("#light1").mouseover(function(){
+					$("#light1").fadeTo(500 , 0.5);
+				});
+			
+				$("#light1").mouseout(function(){
+					$("#light1").fadeTo(500 , 1);
+				});
+			
+			});
+		
+		</script>
+		
+	</head>
+	<body style="text-align:center">
+	
+		
+		<div id="light1" style="border-radius: 55px; height:100px; width: 100px; margin-bottom: 25px; background-color: gray;"></div>
+		
+		
+	</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-3.3.1.min.js"></script>
+		<script>
+		
+			$(document).ready(function(){
+			
+				//localStorage.setItem("key", "value");
+				//localStorage.getItem("key");
+				
+				$("#Sunday").append(localStorage.getItem("Sunday"));
+				$("#Monday").append(localStorage.getItem("Monday"));
+				$("#Tuesday").append(localStorage.getItem("Tuesday"));
+				$("#Wednesday").append(localStorage.getItem("Wednesday"));
+				$("#Thursday").append(localStorage.getItem("Thursday"));
+				$("#Friday").append(localStorage.getItem("Friday"));
+				$("#Saturday").append(localStorage.getItem("Saturday"));
+			
+				$("#add").click(function(){
+					
+					if($("option:selected").text() == "Sunday"){
+						$("#Sunday").append($("#txt").val() + "<hr>");
+						localStorage.setItem("Sunday" , $("#Sunday").html());
+					
+					} else if($("option:selected").text() == "Monday"){
+						$("#Monday").append($("#txt").val() + "<hr>");
+						localStorage.setItem("Monday" , $("#Monday").html());
+
+					
+					} else if($("option:selected").text() == "Tuesday"){
+						$("#Tuesday").append($("#txt").val() + "<hr>");
+						localStorage.setItem("Tuesday" , $("#Tuesday").html());
+					
+					} else if($("option:selected").text() == "Wednesday"){
+						$("#Wednesday").append($("#txt").val() + "<hr>");
+						localStorage.setItem("Wednesday" , $("#Wednesday").html());
+					
+					} else if($("option:selected").text() == "Thursday"){
+						$("#Thursday").append($("#txt").val() + "<hr>");
+						localStorage.setItem("Thursday" , $("#Thursday").html());
+					
+					} else if($("option:selected").text() == "Friday"){
+						$("#Friday").append($("#txt").val() + "<hr>");
+						localStorage.setItem("Friday" , $("#Friday").html());
+					
+					} else {
+						$("#Saturday").append($("#txt").val() + "<hr>");
+						localStorage.setItem("Saturday" , $("#Saturday").html());
+					}
+					
+					
+				
+				});
+				
+				
+				
+			
+			});
+		
+		</script>
+		<style>
+			tr{
+				border: 3px solid green;
+				background-color: lightgreen;
+			}
+		</style>
+	</head>
+	<body style="text-align:center">
+	
+		<input type="text" id="txt" placeholder="Enter Your Title" />
+		<select>
+			<option>Sunday</option>
+			<option>Monday</option>
+			<option>Tuesday</option>
+			<option>Wednesday</option>
+			<option>Thursday</option>
+			<option>Friday</option>
+			<option>Saturday</option>
+		</select>
+		<br><br>
+		<button id="add">Add</button>
+		
+		<hr>
+		
+		<table style="width:100%;">
+			<tr  style="height:50px;">
+				<th>Sunday</th>
+				<th>Monday</th>
+				<th>Tuesday</th>
+				<th>Wednesday</th>
+				<th>Thursday</th>
+				<th>Friday</th>
+				<th>Saturday</th>
+			</tr>
+			<tr style="height:450px; ">
+				<td style="padding:30px;" id="Sunday"></td>
+				<td style="padding:30px;" id="Monday"></td>
+				<td style="padding:30px;" id="Tuesday"></td>
+				<td style="padding:30px;" id="Wednesday"></td>
+				<td style="padding:30px;" id="Thursday"></td>
+				<td style="padding:30px;" id="Friday"></td>
+				<td style="padding:30px;" id="Saturday"></td>
+			</tr>
+			
+		</table>
+	
+	
+	</body>
+</html>
