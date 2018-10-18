@@ -1,1 +1,3 @@
-Install https://nodejs.org/en/download/
+- Install https://nodejs.org/en/download/
+- inside `oop` folder
+- run `npm install` or alias `npm i`
