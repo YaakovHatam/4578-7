@@ -130,5 +130,12 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
  - `abstract`
  - `inner join` and `left join`
  
+## Lesson 35
+- using `git`
+- `markdown` language
+https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
+
+https://en.wikipedia.org/wiki/Markdown
+
 # Resources:
  http://shaytavor.com/%D7%A7%D7%95%D7%A8%D7%A1-%D7%92%D7%90%D7%95%D7%95%D7%94/
