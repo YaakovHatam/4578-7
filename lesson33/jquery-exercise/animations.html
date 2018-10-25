@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-3.3.1.js"></script>
+		<script>
+		
+			$(document).ready(function(){
+				
+				$("button").click(function(){
+				
+					$("div").animate({
+						height: '+=150px',
+						width: '+=150px'
+					} , 1000);
+
+				});
+				
+			});
+		
+		</script>
+		
+	</head>
+	<body style="text-align:center">
+	
+	<div style="background-color:green; height:150px; width:150px"></div>
+	<button>Click Me!</button>
+		
+	</body>
+</html>

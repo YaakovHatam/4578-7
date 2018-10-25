@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-3.3.1.js"></script>
+		<script>
+		
+			$(document).ready(function(){
+				var num = 1;
+				
+				$("h1").click(function(){
+					if (num == 1){
+						$("h1").text("Clicked!");
+						num = 0;
+					} else {
+						$("h1").text("Click Me!");
+						num = 1;
+					}
+					
+				});
+				
+				$("button").click(function(){
+					$("h1").toggle(1000);
+				});
+				
+			
+			});
+		
+		</script>
+		
+	</head>
+	<body style="text-align:center">
+	
+		<h1>Click Me!</h1>
+		<button>Hide H1!</button>
+	
+	
+	</body>
+</html>

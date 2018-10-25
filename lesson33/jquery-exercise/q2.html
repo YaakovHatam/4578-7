@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="jquery-3.3.1.js"></script>
+		<script>
+		
+			/*function test(){
+				alert(document.getElementById("txt").value);
+			}*/
+			
+			
+			$(document).ready(function(){
+			
+				$("#btn").click(function(){
+					alert($("#txt").val());
+				});
+				
+				$("#first").html("");
+				//document.getElementById("first").innerHTML ="
+			
+			});
+			
+		
+		</script>	
+	</head>
+	<body>
+		
+		<input id="txt" type="text" />
+		<button id="btn">Click Me!</button>
+		
+		
+	</body>
+</html>
