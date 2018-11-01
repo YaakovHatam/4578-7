@@ -73,7 +73,19 @@ $arrayOfPilots = $pbl->get();
     <h2>All flights</h2>
     <form action='<?php echo basename($_SERVER['PHP_SELF']); ?>' method='POST'>
     <table class="table">
-    <?php foreach ($arrayOfFlights as $item) {?>
+    <?php foreach ($arrayOfFlights as $item) {
+        if (!empty($_POST['update']) && $_POST['update'] == $item->getFlightId()) { 
+    ?>
+            <tr>
+            <td><?php echo $item->getFlightId() ?></td>
+            <td><input value='<?php echo $item->getFlightFrom() ?>'></td>
+            <td><input value='<?php echo $item->getFlightTo() ?>'></td>
+            <td><input value='<?php echo $item->getFlightSpecialComments() ?>'></td>
+            <td><input value='<?php echo $item->getFlightPilot() ?>'></td>
+            <td><input value='<?php echo $item->getPilotModel()->getPilotName() ?>'></td>
+            <td><button value='<?php echo $item->getFlightId() ?>' name='save' class="btn btn-secondary">Save</button></td>
+            </tr>
+        <?php } else { ?>
         <tr>
             <td><?php echo $item->getFlightId() ?></td>
             <td><?php echo $item->getFlightFrom() ?></td>
@@ -82,8 +94,9 @@ $arrayOfPilots = $pbl->get();
             <td><?php echo $item->getFlightPilot() ?></td>
             <td><?php echo $item->getPilotModel()->getPilotName() ?></td>
             <td><input data-id='<?php echo $item->getFlightId() ?>' type="submit" value='delete' name='delete' class="btn btn-default"/></td>
+            <td><button value='<?php echo $item->getFlightId() ?>' name='update' class="btn btn-secondary">Update</button></td>
         </tr>
-    <?php } ?>
+    <?php } }?>
     </table>
     <input id='deleteid' type='hidden' name='deleteid' value='' />
     </form>
