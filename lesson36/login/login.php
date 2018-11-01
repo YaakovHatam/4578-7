@@ -1,4 +1,6 @@
 <?php
+    session_start();
+    session_destroy();
     require_once 'user-model.php';
     require_once 'user-business-logic.php';
 
@@ -15,6 +17,7 @@
         $res = $ubl->getOne($u);
         $logged = !empty($res['id']);
          if ($logged) {
+             $_SESSION['id'] = $res['id'];
             header("Location: logged.php"); /* Redirect browser */
             exit();
         } else {

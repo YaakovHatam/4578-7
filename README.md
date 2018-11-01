@@ -115,7 +115,7 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
  - remove element dynamically technic
  
 ## Lesson 27
- ##sql|
+ ### sql
  - Create table, Primary Key
  - Select, Insert, Where
  

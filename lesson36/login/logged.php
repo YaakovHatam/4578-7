@@ -1,3 +1,11 @@
+<?php
+    session_start();
+
+    if (empty($_SESSION['id'])) {
+        header("Location: login.php");
+        exit();
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +15,6 @@
     <title>Document</title>
 </head>
 <body>
-    You are logged
+    hello <?php echo $_SESSION['id'] ?> You are logged
 </body>
 </html>
