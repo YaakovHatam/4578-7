@@ -7,6 +7,8 @@ $pbl = new BusinessLogicPilots;
 // $abl = new BusinessLogicAirport;
 $hasErrors = false;
 $errors = [];
+
+// check posts
 if (!empty($_POST['flightFrom']) && !empty($_POST['flightTo']) && !empty($_POST['flightDateTime'])) {
     
     // validations 
@@ -22,6 +24,7 @@ if (!empty($_POST['flightFrom']) && !empty($_POST['flightTo']) && !empty($_POST[
     }
     // end validations
 
+    // if we got errors do not go to DB
     if (!$hasErrors) {
         $flight = new FlightModel([
             'flight_from' => $_POST['flightFrom'],
@@ -47,6 +50,7 @@ if (!empty($_POST['flightFrom']) && !empty($_POST['flightTo']) && !empty($_POST[
     $bl->update($flight);
 } 
  
+// User want filters
 if (!empty($_POST['filter']) && !empty($_POST['filterpilot'])) {
     $arrayOfFlights = $bl->getByPilot($_POST['filterpilot']);
 } else {
@@ -54,8 +58,6 @@ if (!empty($_POST['filter']) && !empty($_POST['filterpilot'])) {
 }
 
 $arrayOfPilots = $pbl->get();
-
-
 ?>
 
 <!DOCTYPE html>
