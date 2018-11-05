@@ -17,7 +17,35 @@
             }
     
             return $resultsArray;
+        }
+
+        public function getByPilot($pid)
+        {
+            $q = 'SELECT * FROM `flights` WHERE pilot_id=?';
             
+            $params = array(
+                $pid
+            );
+
+            $results = $this->dal->select($q, $params);
+            $resultsArray = [];
+    
+            while ($row = $results->fetch()) {
+                array_push($resultsArray, new FlightModel($row));
+            }
+    
+            return $resultsArray;
+        }
+
+        public function getOne($id)
+        {
+            $q = 'SELECT * FROM `flights` WHERE flight_id= :fid';
+            
+            $results = $this->dal->select($q, [
+                'fid' => $id
+            ]);
+            $row = $results->fetch();
+            return new FlightModel($row);
         }
 
         public function set($f) {
@@ -43,5 +71,17 @@
             );
 
             $this->dal->delete($query, $params);
+        }
+
+        public function update($f) {
+            $query = "UPDATE `flights` SET `flight_special_comments`=?,`pilot_id`=? WHERE `flight_id`=?";
+
+            $params = array(
+                $f->getFlightSpecialComments(),
+                $f->getFlightPilot(),
+                $f->getFlightId()
+            );
+
+            $this->dal->update($query, $params);
         }
     }

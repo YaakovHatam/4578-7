@@ -41,8 +41,16 @@
             return $this->flight_special_comments;
         }
 
+        function setFlightSpecialComments($sc) {
+            $this->flight_special_comments = $sc;
+        }
+
         function getFlightPilot() {
             return $this->pilot_id;
+        }
+
+        function setFlightPilot($p) {
+            $this->pilot_id = $p;
         }
 
         // Lazy load

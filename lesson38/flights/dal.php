@@ -51,6 +51,13 @@ final class DataAccessLayer
 		$statement->execute($params);
     }
 
+    public function update($query, $params) {
+        $pdo = new PDO($this->dsn, $this->user, $this->pass, $this->opt);
+            // send data to sql
+		$statement = $pdo->prepare($query);
+		$statement->execute($params);
+    }
+
     public function delete($query, $params) {
         $pdo = new PDO($this->dsn, $this->user, $this->pass, $this->opt);
             // send data to sql
