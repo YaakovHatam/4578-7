@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2018 at 08:03 PM
+-- Generation Time: Nov 29, 2018 at 08:19 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -34,25 +34,47 @@ CREATE TABLE `flights` (
   `flight_to` int(50) NOT NULL,
   `flight_datetime` datetime NOT NULL,
   `flight_special_comments` varchar(500) COLLATE utf8_bin NOT NULL,
-  `pilot_id` int(11) NOT NULL
+  `pilot_id` int(11) NOT NULL,
+  `pilot_comments` varchar(500) COLLATE utf8_bin NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 --
 -- Dumping data for table `flights`
 --
 
-INSERT INTO `flights` (`flight_id`, `flight_from`, `flight_to`, `flight_datetime`, `flight_special_comments`, `pilot_id`) VALUES
-(23, 1, 2, '2018-09-20 19:23:24', '', 1),
-(24, 2, 1, '2018-09-27 19:24:22', '', 2),
-(25, 3, 4, '2018-09-20 19:26:14', '', 2),
-(26, 1, 2, '2018-10-09 00:00:00', 'Not real', 1),
-(27, 1, 2, '2222-02-22 00:00:00', '123', 1),
-(28, 2, 3, '2222-02-22 00:00:00', 'comment', 1),
-(29, 2, 3, '2222-02-22 00:00:00', 'comment', 1),
-(30, 2, 3, '2222-02-22 00:00:00', 'comment', 1),
-(31, 2, 3, '2222-02-22 00:00:00', 'comment', 1),
-(32, 1, 2, '2222-02-22 00:00:00', 'asdasd', 1),
-(33, 1, 2, '2222-02-22 00:00:00', '123123123', 3);
+INSERT INTO `flights` (`flight_id`, `flight_from`, `flight_to`, `flight_datetime`, `flight_special_comments`, `pilot_id`, `pilot_comments`) VALUES
+(25, 3, 4, '2018-09-20 19:26:14', '', 2, 'this is comment'),
+(26, 1, 2, '2018-10-09 00:00:00', 'Not real2', 4, ''),
+(31, 2, 3, '2222-02-22 00:00:00', 'comment', 1, ''),
+(32, 1, 2, '2222-02-22 00:00:00', 'asdasd', 1, ''),
+(33, 1, 2, '2222-02-22 00:00:00', 'co workers', 1, ''),
+(34, 1, 2, '1212-03-23 00:00:00', 'its cooperation', 1, ''),
+(35, 1, 2, '2222-12-31 00:00:00', '500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars 500 chars ', 1, ''),
+(36, 1, 2, '2222-02-22 00:00:00', '222', 1, ''),
+(37, 1, 2, '2222-02-22 00:00:00', 'so long', 1, ''),
+(38, 1, 2, '2222-02-22 00:00:00', 'so long', 1, ''),
+(39, 1, 2, '2222-02-22 00:00:00', 'so long', 1, ''),
+(40, 1, 2, '2222-02-22 00:00:00', 'so long', 1, ''),
+(41, 1, 2, '2222-02-22 00:00:00', 'so long', 1, '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `flights_pilots`
+--
+
+CREATE TABLE `flights_pilots` (
+  `pid` int(11) NOT NULL,
+  `fid` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Dumping data for table `flights_pilots`
+--
+
+INSERT INTO `flights_pilots` (`pid`, `fid`) VALUES
+(1, 25),
+(1, 26);
 
 -- --------------------------------------------------------
 
@@ -106,6 +128,13 @@ ALTER TABLE `flights`
   ADD KEY `pilot_id` (`pilot_id`);
 
 --
+-- Indexes for table `flights_pilots`
+--
+ALTER TABLE `flights_pilots`
+  ADD PRIMARY KEY (`pid`,`fid`),
+  ADD KEY `flights` (`fid`);
+
+--
 -- Indexes for table `pilots`
 --
 ALTER TABLE `pilots`
@@ -125,7 +154,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `flights`
 --
 ALTER TABLE `flights`
-  MODIFY `flight_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `flight_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT for table `pilots`
@@ -148,6 +177,13 @@ ALTER TABLE `users`
 --
 ALTER TABLE `flights`
   ADD CONSTRAINT `flight_pilot` FOREIGN KEY (`pilot_id`) REFERENCES `pilots` (`pilot_id`);
+
+--
+-- Constraints for table `flights_pilots`
+--
+ALTER TABLE `flights_pilots`
+  ADD CONSTRAINT `flights` FOREIGN KEY (`fid`) REFERENCES `flights` (`flight_id`),
+  ADD CONSTRAINT `pilots` FOREIGN KEY (`pid`) REFERENCES `pilots` (`pilot_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
