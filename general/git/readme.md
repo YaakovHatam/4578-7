@@ -1,12 +1,12 @@
+
 download git: https://git-scm.com/downloads
 check if installed: `git --version`
 Get course project:
+
 --------------------
 git clone https://github.com/kob-e/4578-7.git
 
 git pull
-
-
 
 create your own project:
 -----------------------------
