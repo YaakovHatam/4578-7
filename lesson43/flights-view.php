@@ -41,7 +41,8 @@ if (!empty($_POST['flightFrom']) && !empty($_POST['flightTo']) && !empty($_POST[
     
         ]);
      
-        $bl->set($flight);
+        $id = $ctrl->actionInsert($flight);
+        echo '<script>alert("'.$id.'")</script>';
     }
     
   

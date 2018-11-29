@@ -1,6 +1,7 @@
 <?php
     require_once './bl.php';
   require_once 'pilot-model.php';
+    require_once 'business-logic-flights.php';
 
     class BusinessLogicPilots extends BusinessLogic {
         public function get()
@@ -10,10 +11,11 @@
             $results = $this->dal->select($q);
             $resultsArray = [];
     
+            $flightsBl = new BusinessLogicFlights;
             while ($row = $results->fetch()) {
-                array_push($resultsArray, new PilotModel($row));
+
+                array_push($resultsArray, new PilotModel($row, $flightsBl->getFlightsByPilot($row['pilot_id'])));
             }
-    
             return $resultsArray;
         }
 

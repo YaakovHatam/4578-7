@@ -4,10 +4,19 @@
     require_once 'business-logic-pilots.php';
 
     class FlightController extends Controller {
+        private $bl;
+
+        function __construct() {
+            $this->bl = new BusinessLogicFlights;
+        }
+
         function actionView() {
-            $bl = new BusinessLogicFlights;
-            $data = $bl->get();
+            $data = $this->bl->get();
             return $data;
+        }
+
+        function actionInsert($flight) {
+            return $this->bl->set($flight);
         }
     }
 ?>

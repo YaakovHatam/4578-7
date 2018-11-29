@@ -19,22 +19,17 @@
             return $resultsArray;
         }
 
-        public function getByPilot($pid)
+        public function getFlightsByPilot($pid)
         {
-            $q = 'SELECT * FROM `flights` WHERE pilot_id=?';
-            
-            $params = array(
+            $flights_query = 'SELECT fid FROM flights_pilots WHERE pid=?';
+            $flightsResults = $this->dal->select($flights_query, [
                 $pid
-            );
-
-            $results = $this->dal->select($q, $params);
-            $resultsArray = [];
-    
-            while ($row = $results->fetch()) {
-                array_push($resultsArray, new FlightModel($row));
+            ]);
+            $flightsObjectsArray = [];
+            while ($flightRow = $flightsResults->fetch()) {
+                array_push($flightsObjectsArray, $this->getOne($flightRow['fid']));
             }
-    
-            return $resultsArray;
+            return $flightsObjectsArray;
         }
 
         public function getOne($id)
@@ -60,7 +55,7 @@
                 "e" => $f->getFlightPilot(),
             );
 
-            $this->dal->insert($query, $params);
+            return $this->dal->insert($query, $params);
         }
 
         public function delete($id) {
