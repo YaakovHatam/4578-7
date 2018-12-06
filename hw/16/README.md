@@ -3,7 +3,7 @@
 https://openweathermap.org/api
 
 
-get to `Current weather data`
+get to api doc: Current weather data
 
 ```javascript
  $.ajax({
@@ -16,3 +16,7 @@ get to `Current weather data`
 
   });
 ```
+
+
+
+api key: `e06a2f3d21ca934dc5a82ff8ba8ec0d8`
