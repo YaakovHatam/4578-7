@@ -8,5 +8,7 @@ FB, AMZN, AAPL, NFLX, GOOG
 
 ## Steps
 - Open a new project (vsocde)
-- Design your html
+- add bootstrap via npm (`npm i bootstrap`)
 - Add jquery via npm (`npm i jquery`)
+- Design your html
+
