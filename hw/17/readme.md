@@ -12,4 +12,4 @@ FB, AMZN, AAPL, NFLX, GOOG
 - Add jquery via npm (`npm i jquery`)
 - Design your html
 - get API key from https://www.alphavantage.co
-- use the api endpoint https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=fb&interval=5min&apikey= tp get stocks data
+- use the api endpoint https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=fb&interval=5min&apikey= to get stocks data
