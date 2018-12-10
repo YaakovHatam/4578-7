@@ -5,3 +5,8 @@ https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=fb&interv
 
 ## Stocks symbols
 FB, AMZN, AAPL, NFLX, GOOG 
+
+## Steps
+- Open a new project (vsocde)
+- Design your html
+- Add jquery via npm (`npm i jquery`)
