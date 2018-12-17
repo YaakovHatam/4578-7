@@ -1,0 +1,15 @@
+{
+  "name": "18",
+  "version": "1.0.0",
+  "description": "https://developers.google.com/maps/documentation/maps-static/intro",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.1.3",
+    "jquery": "^3.3.1"
+  }
+}

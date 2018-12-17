@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel='stylesheet' href='/node_modules/bootstrap/dist/css/bootstrap.min.css'>
+    <script src='/node_modules/jquery/dist/jquery.min.js'></script>
+</head>
+
+<body>
+    <div class='container'>
+        <button id='b'>Bring em</button>
+    </div>
+    <div class='container'>
+        <div class="card-group" id=user>
+
+        </div>
+    </div>
+
+    <script>
+        const userTemplate = `<div class="card">
+                    <img class="card-img-top" src="{{img}}" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">{{name}}</h5>
+                      <p class="card-text">{{bio}}</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>`;
+
+
+        const usersArray = [
+            'facebook',
+            'twitter',
+            'google'
+        ];
+        const usersObjectCache = {};
+
+        $('#b').click(startUsers);
+
+        function startUsers() {
+            $('#user').empty();
+            for (let i = 0; i < usersArray.length; i++) {
+                if (usersObjectCache[usersArray[i]]) {
+                    console.log('from cache object')
+                    appendToPage(usersObjectCache[usersArray[i]]);
+                } else {
+                    getUserFromApi(usersArray[i], function (d) {
+                        usersObjectCache[usersArray[i]] = d;
+                        appendToPage(d);
+                    });
+                    console.log('from api')
+                }
+            }
+        }
+
+        function getUserFromApi(user, callback) {
+            $.ajax('https://api.github.com/users/' + user).done(function (d) {
+                callback(d);
+            })
+        }
+
+        function appendToPage(d) {
+            let t = userTemplate;
+            t = t.replace('{{bio}}', d.bio);
+            t = t.replace('{{img}}', d.avatar_url);
+            t = t.replace('{{name}}', d.name);
+            $('#user').append(t);
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
