@@ -1,0 +1,2 @@
+# scopes
+declared by function
