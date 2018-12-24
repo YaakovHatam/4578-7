@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='node_modules/jquery/dist/jquery.min.js'></script>
+    <script src='underline.js'></script>
+    <style>
+        #home {
+            background-color: aqua;
+        }
+
+        #about {
+            background-color: cadetblue;
+        }
+
+        #contact {
+            background-color: red;
+        }
+
+        #gallery {
+            background-color: brown;
+        }
+        #back {
+            position: fixed;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class='top-menu'>
+        <a href='#home'>Home</a> |
+        <a href='#about'>About</a> |
+        <a href='#contact'>contact</a> |
+        <a href='#gallery'>gallery</a>
+    </nav>
+    <section id='home'>
+        <div id='a' class='b'>
+            this is a text
+        </div>
+
+        <div id='b'>
+
+        </div>
+        <script>
+            $('#a').addUnderline().fadeOut().fadeIn();
+            $(document).on('click', '.b', function () {
+                // future elements
+                console.log('hello');
+                $('#b').append('<div class="b">hello</div>');
+            });
+/*
+         $('.b').click(function() {
+             console.log('hello');
+             $('#b').append('<div class=b>hello</div>');
+         })
+         */
+        </script>
+    </section>
+
+    <section id='about'></section>
+    <section id='contact'></section>
+    <section id='gallery'></section>
+    <div id='back'>back to top</div>
+    <script>
+        const height = $(document).height();
+        $('section[id]').css('height', height);
+        $('#back').hide();
+        $(document).ready(function () {
+            $(document).scroll(function() {
+                const currentPosition = $(window).scrollTop();
+                if (currentPosition > height) {
+                    $('#back').show();
+                } else {
+                    $('#back').hide();
+                }
+            })
+            $('#back').click(function () {
+                $("html, body").animate({ scrollTop: 0 }, 500);
+            });
+        });
+    </script>
+</body>
+
+</html>

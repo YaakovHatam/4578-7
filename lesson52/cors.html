@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='node_modules/jquery/dist/jquery.min.js'></script>
+</head>
+<body>
+    <a href='/cors.html'>Cors</a>
+    <script>
+        $.ajax('bridge.php?city=boston').done(function(d) {
+            if (typeof d === 'string')
+                JSON.parse(d);
+            console.log(d);
+        })
+    </script>
+    <!--
+    <div style='position:absolute; top:27px; left:33px; z-index: 999'>
+        <a style="display: block; width: 40px;height:20px" href='walla.html'></a>
+    </div>
+    <iframe src='https://walla.co.il' width=800 height="800"></iframe>
+    <script>
+        $.ajax('https://facebook.com').done(function(d) {
+            console.log(d);
+        })
+    </script>-->
+</body>
+</html>
