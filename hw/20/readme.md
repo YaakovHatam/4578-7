@@ -7,5 +7,5 @@ We are taking the stocks exercise from hw17 and we are making the same applicati
 - make `observer` pattern to register stocks to update interval
 
 
-![Mockup of the exercise](4578-7/hw/20/stocks.png)
+![Mockup of the exercise](stocks.png)
    
