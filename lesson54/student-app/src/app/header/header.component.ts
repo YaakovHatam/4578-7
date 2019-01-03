@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Student } from '../models/student.model';
 
 @Component({
@@ -8,13 +8,15 @@ import { Student } from '../models/student.model';
 })
 export class HeaderComponent implements OnInit {
   title: string;
-  menuItems: string[];
+  @Input() menuItems: string[];
   show: boolean;
   hclass: string;
   colorClass: string[];
   students: Student[];
 
-  constructor() { }
+  constructor() { 
+
+  }
 
   ngOnInit() {
     this.colorClass = [
@@ -25,11 +27,7 @@ export class HeaderComponent implements OnInit {
     this.hclass = this.colorClass[0];
     this.show = true;
     this.title = 'i am title';
-    this.menuItems = [
-      'Home',
-      'About',
-      'Contact'
-    ];
+  
 
     this.students = [
       {
@@ -47,7 +45,7 @@ export class HeaderComponent implements OnInit {
     ]
   }
 
-  clicked() {
+  clicked(): void {
     this.hclass = this.colorClass[Math.floor(Math.random()*3)];
   }
 

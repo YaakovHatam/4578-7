@@ -12,3 +12,7 @@ h2 {
 .brown {
     color: brown;
 }
+
+* {
+    font-size: 2rem;
+}

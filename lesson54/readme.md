@@ -9,3 +9,6 @@ Run the application (dont forget to navigate with `cd` to your new app directory
 
 ## Creating Component
 Create new component: `ng generate component COMPONENT_NAME` 
+
+### Input decorator
+`@Input() varname`
