@@ -13,9 +13,20 @@
             $objs = $this->fctrl->actionView();
             echo json_encode($objs, JSON_PRETTY_PRINT);
         }
+
+        function post($params) {
+            
+        }
     }
 
-   echo $_SERVER['REQUEST_METHOD'];
+    $ctrl = new FlightApiController;
+    switch ($_SERVER['REQUEST_METHOD']) {
+        case 'get': 
+            $ctrl->get();
+            break;
+        case 'post':
+            $ctrl->post($_POST);
+    }
 
 
 ?>
