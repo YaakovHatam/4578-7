@@ -12,3 +12,6 @@ Create new component: `ng generate component COMPONENT_NAME`
 
 ### Input decorator
 `@Input() varname`
+
+### Services
+`ng generate service {{servicename}}` for ex: `ng generate service data`
