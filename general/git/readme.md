@@ -13,6 +13,7 @@ create your own project:
 - https://github.com/new
 
 git config --global user.email "xyz@gmail.com"
+
 git config --global user.name "xyz"
 
 - git commit -m "changeset documentation"
