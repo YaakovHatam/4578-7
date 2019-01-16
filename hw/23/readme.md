@@ -16,6 +16,7 @@ Platform: **Firebase**?
 ## Preparing work space
 - Create a new Angular app
 - install and configure bootstrap
+- install json-server global `npm i json-server -g`
 
 ## Our models
 - `Event`
