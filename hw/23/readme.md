@@ -32,3 +32,12 @@ The event list component will have Filters (inputs) and the componentn interact 
 
 #### Event service
 The event service responsible for all data
+
+#### Header component
+this component will contain the menu and the logo
+
+#### Menu component
+Will have a list of menu items 
+
+#### Menu item component
+represent a menu item
