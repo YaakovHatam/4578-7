@@ -12,13 +12,13 @@ create your own project:
 -----------------------------
 - https://github.com/new
 
-git config --global user.email "xyz@gmail.com"
+`git config --global user.email "xyz@gmail.com"`
 
-git config --global user.name "xyz"
+`git config --global user.name "xyz"`
 
-- git commit -m "changeset documentation"
+- `git commit -m "changeset documentation"`
 
-- git push
+- `git push`
 
 
 *** It's always good idea to `git pull` before working
