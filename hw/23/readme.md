@@ -19,7 +19,7 @@ Platform: **Firebase**?
 - install json-server global `npm i json-server -g`
 
 ## Our models
-- `Event`
+- `Event` (Fields: `id`, `dateStart`, `duration`, `participants`)
 - `Venue`
 - `Participant`
 
