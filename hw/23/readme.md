@@ -19,9 +19,9 @@ Platform: **Firebase**?
 - install json-server global `npm i json-server -g`
 
 ## Our models
-- `Event` (Fields: `id`, `dateStart`, `duration`, `participants`)
-- `Venue`
-- `Participant`
+- `Event` (Fields: `id: number`, `dateStart: Date`, `duration: number`, `participants: Participant[]`)
+- `Venue` (Fields:`id:number`, `name: string`, `address:string`)
+- `Participant` (Fields: `id:number`, `name: string`, `classroom: number`)
 
 ## Warming up
 ### Client side
