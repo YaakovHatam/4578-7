@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src='node_modules/jquery/dist/jquery.min.js'></script>
+</head>
+
+<body>
+
+
+    <script>
+        window.cacheObj = window.cacheObj || {};
+
+        setInterval(function () {
+            getProjects(function (d) {
+                console.log(d)
+            })
+        }, 1 * 1000);
+
+        function getProjects(callback) {
+
+            const lastTime = window.cacheObj.lastFetch;
+            if (lastTime) {
+                const dateNow = new Date();
+                const diff = (dateNow.getTime() - lastTime.getTime()) / 1000;
+                if (diff > 20) {
+                    h(callback);
+                } else {
+                    callback(window.cacheObj.projects);
+                    console.log('from cache')
+                }
+            } else {
+                h(callback);
+            }
+        }
+
+        function h(callback) {
+            getProjectsFromServer(function (pData) {
+                window.cacheObj.projects = pData;
+                window.cacheObj.lastFetch = new Date();
+                callback(pData);
+                console.log('from server')
+            });
+        }
+
+        function getProjectsFromServer(callback) {
+            $.ajax('http://localhost:3000/project').done(function (d) {
+                callback(d);
+            });
+        }
+    </script>
+
+</body>
+
+</html>

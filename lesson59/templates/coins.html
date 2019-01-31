@@ -1,9 +1,18 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="card col-sm-4" style="width: 18rem;">
+  <div class="card-body">
+    <div class='row'>
+        <div class='col-8'>
+            <h5 class="card-title">{{id}}</h5>
+            <p class="card-text">{{symbol}}</p>
+            <p class="card-text">{{name}}</p>
+            <a href="#" class="btn btn-primary">More info</a>
+          </div>
+      <div class='col-4'>
+        <ul class="pagination" onclick="addCoin(this, '{{id}}')">
+          <li class="page-item"><a class="page-link" href="#">On</a></li>
+          <li class="page-item active"><a class="page-link" href="#">Off</a></li>
+        </ul>
+      </div>
     </div>
   </div>
-  
+</div>
