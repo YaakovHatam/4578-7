@@ -42,3 +42,9 @@ Will have a list of menu items
 
 #### Menu item component
 represent a menu item
+
+## Routing
+### simple routes
+Add routes for `home`, `event list`, `about` and `contact`. remove the `selector` attribute from `home`, `about`, `event list` and `contact` components, they are "pages components"
+
+
