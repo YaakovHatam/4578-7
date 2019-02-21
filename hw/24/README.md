@@ -14,7 +14,7 @@ Create your first files:
 - `dogs.js`
 
 ### Endpoints
-#### Get `/dog/`
+#### Get `/dog`
 send back random dog image source
 
 ## Client
