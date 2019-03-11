@@ -149,5 +149,6 @@ https://en.wikipedia.org/wiki/Markdown
 ## Angular gists
 Update angular data service every X seconds: https://gist.github.com/kob-e/eab1effbb62036dce7cadf6fd13363c3
 
+Update data realtime with socket.io: https://gist.github.com/kob-e/1f3813abf82bcf6759f0a6c4f1965c3e
 # Resources:
  http://shaytavor.com/%D7%A7%D7%95%D7%A8%D7%A1-%D7%92%D7%90%D7%95%D7%95%D7%94/
