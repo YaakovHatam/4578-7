@@ -1,0 +1,18 @@
+<header>
+  <nav>
+    <ul>
+      <li>
+        <a [routerLink]='["/"]'>Home</a>
+      </li>
+      <li>
+          <a [routerLink]='["/add"]'>Add student</a>
+        </li>
+    </ul>
+  </nav>
+</header>
+<main>
+ <router-outlet></router-outlet>
+</main>
+<aside>
+  <app-list></app-list>
+</aside>
