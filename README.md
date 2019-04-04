@@ -140,6 +140,9 @@ make this https://github.com/kob-e/4578-7/tree/master/lesson6/class-exercise/bef
 ## Lesson 54 - 60
 https://github.com/kob-e/kickstarter-angular
 
+## Lesson 76 - JWT with Angular7 and Node.js
+https://github.com/kob-e/angular-nodejs-jwt
+
 https://github.com/kob-e/4578-7/tree/master/general/git
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
