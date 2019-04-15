@@ -143,6 +143,10 @@ https://github.com/kob-e/kickstarter-angular
 ## Lesson 76 - JWT with Angular7 and Node.js
 https://github.com/kob-e/angular-nodejs-jwt
 
+## Lesson 79
+https://github.com/kob-e/shop-end-to-end-mean-stack
+
+
 https://github.com/kob-e/4578-7/tree/master/general/git
 
 https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet
