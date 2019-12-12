@@ -157,5 +157,7 @@ https://en.wikipedia.org/wiki/Markdown
 Update angular data service every X seconds: https://gist.github.com/kob-e/eab1effbb62036dce7cadf6fd13363c3
 
 Update data realtime with socket.io: https://gist.github.com/kob-e/1f3813abf82bcf6759f0a6c4f1965c3e
-# Resources:
+## Resources:
  http://shaytavor.com/%D7%A7%D7%95%D7%A8%D7%A1-%D7%92%D7%90%D7%95%D7%95%D7%94/
+
+[מדריך בניית אתרים בוורדפרס](https://craftweb.co.il/%d7%95%d7%95%d7%a8%d7%93%d7%a4%d7%a8%d7%a1-%d7%94%d7%9e%d7%93%d7%a8%d7%99%d7%9a-%d7%94%d7%aa%d7%a7%d7%a0%d7%94-%d7%95%d7%a2%d7%91%d7%95%d7%93%d7%94)
